@@ -90,7 +90,8 @@ void ASWeapon::Fire()
 			DrawDebugLine(GetWorld(), EyeLocation, TraceEnd, FColor::White, false, 1.0f, 0, 0.5f);
 
 		}
-
+		UGameplayStatics::PlaySoundAtLocation(GetWorld(), RifleSound, GetActorLocation());
+		
 		PlayFireEffects(TracerEndPoint);
 
 		if (Role == ROLE_Authority)

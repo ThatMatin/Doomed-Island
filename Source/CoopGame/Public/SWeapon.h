@@ -83,6 +83,10 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 	float BaseDamage;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+	USoundBase* RifleSound;
+
+	UFUNCTION()
 	virtual void Fire();
 	
 	UFUNCTION(Server, Reliable, WithValidation)
